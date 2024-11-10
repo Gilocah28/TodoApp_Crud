@@ -1,0 +1,28 @@
+@import "./variable";
+@import "./media";
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: $MainFont;
+}
+body {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.App_dark,
+.App_light {
+  width: 100%;
+  min-height: 100vh;
+  color: $VeryDarkBlue;
+}
+
+.App_dark {
+  background-color: $VeryDarkBlue;
+  color: $LightGrayishBlueHover;
+}
