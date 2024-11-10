@@ -8,4 +8,30 @@
   left: 50%;
   transform: translate(-50%, -50%);
   border: 1px solid black;
+
+  .title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+    button{
+      padding: none;
+      border: none;
+      width: 50px;
+      height: 50px;
+      background: none;
+
+      &:hover{
+        cursor: pointer;
+      }
+
+      img{
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+
+
 }
