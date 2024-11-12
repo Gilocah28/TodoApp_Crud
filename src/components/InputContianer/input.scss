@@ -1,0 +1,46 @@
+@import "../../variable";
+
+.input_container {
+  padding: 10px;
+  border-radius: 10px;
+
+  form {
+    display: flex;
+    align-items: center;
+
+    button {
+      margin-right: 5px;
+      padding: 5px;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      border: none;
+      background-color: none;
+      flex-shrink: 0;
+
+      &:hover {
+        cursor: pointer;
+        background-image: url("../../assets/icon-check.svg"),
+          linear-gradient(
+            337deg,
+            rgba(157, 2, 148, 1) 18%,
+            rgba(0, 222, 255, 1) 100%
+          );
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+    input {
+      padding: 10px;
+      flex-grow: 1;
+      display: inline;
+      border: none;
+      
+      &:focus{
+          outline: none;
+          
+      }
+      
+    }
+  }
+}

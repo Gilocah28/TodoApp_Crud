@@ -15,14 +15,31 @@ body {
   position: relative;
 }
 
+input{
+  font-size: 16px;
+}
+
 .App_dark,
 .App_light {
   width: 100%;
   min-height: 100vh;
   color: $VeryDarkBlue;
+
+  .input_container{
+    box-shadow: 1px 0px 10px 5px rgba(0,0,0,0.34);
+  }
 }
 
 .App_dark {
   background-color: $VeryDarkBlue;
   color: $LightGrayishBlueHover;
+
+  .input_container {
+    background-color: $VeryDarkDesaturatedBlue;
+
+    input {
+      color: $LightGrayishBlueHover;
+      background-color: $VeryDarkDesaturatedBlue;
+    }
+  }
 }

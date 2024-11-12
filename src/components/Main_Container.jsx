@@ -3,6 +3,7 @@ import "./main_container.scss";
 import sunBtn from "../assets/icon-sun.svg";
 import moonBtn from "../assets/icon-moon.svg";
 import { useToggle } from "../customhook/useToggle";
+import Input from "./InputContianer/Input";
 
 const Main_Container = ({ isToggle, handleToggle }) => {
   return (
@@ -13,6 +14,9 @@ const Main_Container = ({ isToggle, handleToggle }) => {
           <img src={isToggle ? sunBtn : moonBtn} alt="btn" />
         </button>
       </div>
+
+    <Input/>
+
     </div>
   );
 };
