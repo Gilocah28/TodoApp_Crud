@@ -1,13 +1,24 @@
-import React from "react";
-import "./input.scss"
+import React, { useContext } from "react";
+import "./input.scss";
+import { FetchContext } from "../../context/FetchContext";
 
 const Input = () => {
-  return <div className="input_container">
-    <form>
-        <button type="submit"></button>
-        <input type="text" placeholder="Create a new todo..."/>
-    </form>
-  </div>;
+  const { handleSubmit, setTask, task } = useContext(FetchContext);
+
+  return (
+    <div className="input_container">
+      <form onSubmit={handleSubmit}>
+        <button type="submit" className="submit"></button>
+        <input
+          type="text"
+          placeholder="Create a new todo..."
+          value={task}
+          onChange={(event) => setTask(event.target.value)}
+          required
+        />
+      </form>
+    </div>
+  );
 };
 
 export default Input;

@@ -1,5 +1,3 @@
-@import "../../variable";
-
 .input_container {
   padding: 10px;
   border-radius: 10px;
@@ -14,8 +12,8 @@
       border-radius: 50%;
       width: 20px;
       height: 20px;
-      border: none;
-      background-color: none;
+      border: 1px solid hsl(235, 24%, 19%);
+      background: none;
       flex-shrink: 0;
 
       &:hover {
@@ -28,6 +26,7 @@
           );
         background-repeat: no-repeat;
         background-position: center;
+        border: none;
       }
     }
     input {
@@ -35,12 +34,10 @@
       flex-grow: 1;
       display: inline;
       border: none;
-      
-      &:focus{
-          outline: none;
-          
+
+      &:focus {
+        outline: none;
       }
-      
     }
   }
 }

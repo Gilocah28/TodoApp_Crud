@@ -2,8 +2,8 @@ import React from "react";
 import "./main_container.scss";
 import sunBtn from "../assets/icon-sun.svg";
 import moonBtn from "../assets/icon-moon.svg";
-import { useToggle } from "../customhook/useToggle";
 import Input from "./InputContianer/Input";
+import ListComponent from "./ListComponent/ListComponent";
 
 const Main_Container = ({ isToggle, handleToggle }) => {
   return (
@@ -16,6 +16,7 @@ const Main_Container = ({ isToggle, handleToggle }) => {
       </div>
 
     <Input/>
+    <ListComponent/>
 
     </div>
   );

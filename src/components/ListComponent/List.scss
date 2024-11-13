@@ -1,0 +1,71 @@
+.list_container {
+  margin-top: 1rem;
+  border-radius: 10px;
+}
+
+.list {
+  padding: 15px;
+  padding-left: 0;
+  border-bottom: 1px solid hsl(234, 11%, 52%);
+  list-style: none;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .check_container {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+
+
+    p {
+      margin-top: 3px;
+      margin-left: 15px;
+    }
+
+    input {
+      appearance: none;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      border: 1px solid white;
+      background-color: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      &:checked {
+        cursor: pointer;
+        background-image: url("../../assets/icon-check.svg"),
+          linear-gradient(
+            337deg,
+            rgba(157, 2, 148, 1) 18%,
+            rgba(0, 222, 255, 1) 100%
+          );
+        background-repeat: no-repeat;
+        background-position: center;
+        border: none;
+      }
+    }
+  }
+
+  button {
+    padding: 5px;
+    img {
+      width: 15px;
+      height: 15px;
+    }
+    background: none;
+    border: none;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &:last-child {
+    border: none;
+  }
+}
