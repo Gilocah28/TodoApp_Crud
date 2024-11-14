@@ -50,3 +50,46 @@ input {
     border: 1px solid white;
   }
 }
+
+::-webkit-scrollbar {
+  width: 2px;
+  height: 2px;
+}
+
+/* Remove any scrollbar buttons */
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+
+/* Scrollbar thumb styling */
+::-webkit-scrollbar-thumb {
+  background: #e1e1e1;
+  border-radius: 50px;
+}
+
+/* Thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #ffffff;
+}
+
+/* Thumb on active click */
+::-webkit-scrollbar-thumb:active {
+  background: #000000;
+}
+
+/* Scrollbar track styling */
+::-webkit-scrollbar-track {
+  background: #666666;
+  border-radius: 54px;
+}
+
+/* Track on active click */
+::-webkit-scrollbar-track:active {
+  background: #333333;
+}
+
+/* Scrollbar corner styling */
+::-webkit-scrollbar-corner {
+  background: transparent;
+}

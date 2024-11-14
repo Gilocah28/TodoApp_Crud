@@ -1,10 +1,12 @@
-import React, { useContext } from "react";
+import React, { useContext, useMemo, useState } from "react";
 import { FetchContext } from "../../context/FetchContext";
 import IconCross from "../../assets/icon-cross.svg";
 import "./List.scss";
+import FilteredComponent from "../filteredComponent/FilteredComponent";
 
 const ListComponent = () => {
   const { todos, setTodos } = useContext(FetchContext);
+  const [filterItem, setFilterItem] = useState("all");
 
   const deleteTodos = (id) => {
     const newTodos = todos.filter((todo) => todo.id !== id);
@@ -25,10 +27,22 @@ const ListComponent = () => {
     });
   };
 
+  const handleFilterTodos = (value) => {
+    setFilterItem(value);
+  };
+
+  const filteredTodos = useMemo(() => {
+    return todos.filter((todo) => {
+      if (filterItem === "active") return !todo.isComplete;
+      if (filterItem === "complete") return todo.isComplete;
+      return true;
+    });
+  }, [todos, filterItem]);
+
   return (
     <div className="list_container">
       <ul>
-        {todos.map((todo) => {
+        {filteredTodos.map((todo) => {
           return (
             <div key={todo.id} className="list">
               <div className="check_container">
@@ -37,7 +51,9 @@ const ListComponent = () => {
                   checked={todo.isComplete}
                   onChange={() => updateCheck(todo.id)}
                 />
-                <p>{todo.title}</p>
+                <p className={todo.isComplete ? "completed" : ""}>
+                  {todo.title}
+                </p>
               </div>
               <button onClick={() => deleteTodos(todo.id)}>
                 <img src={IconCross} alt="icon" />
@@ -46,6 +62,8 @@ const ListComponent = () => {
           );
         })}
       </ul>
+
+      <FilteredComponent handleFilterTodos={handleFilterTodos}/>
     </div>
   );
 };

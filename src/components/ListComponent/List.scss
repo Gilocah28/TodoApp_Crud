@@ -3,6 +3,13 @@
   border-radius: 10px;
 }
 
+ul {
+  max-height: 400px;
+  overflow-y: auto;
+
+  
+}
+
 .list {
   padding: 15px;
   padding-left: 0;
@@ -19,10 +26,14 @@
     display: flex;
     align-items: center;
 
-
     p {
       margin-top: 3px;
       margin-left: 15px;
+    }
+
+    .completed {
+      text-decoration: line-through;
+      opacity: 0.5;
     }
 
     input {
@@ -63,9 +74,5 @@
     &:hover {
       cursor: pointer;
     }
-  }
-
-  &:last-child {
-    border: none;
   }
 }
