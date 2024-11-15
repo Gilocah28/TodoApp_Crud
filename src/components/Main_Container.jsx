@@ -16,7 +16,7 @@ const Main_Container = ({ isToggle, handleToggle }) => {
       </div>
 
     <Input/>
-    <ListComponent/>
+    <ListComponent/>    
 
     </div>
   );
