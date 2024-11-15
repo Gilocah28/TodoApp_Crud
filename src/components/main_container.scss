@@ -1,3 +1,5 @@
+@import "../media";
+
 .container {
   position: absolute;
   margin-top: 20px;
@@ -8,30 +10,35 @@
   left: 50%;
   transform: translate(-50%, -50%);
 
+  @include laptop {
+    max-width: 350px;
+    top: 41%;
+  }
 
-  .title{
+  @include mobile {
+    max-width: 320px;
+  }
+
+  .title {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-
-    button{
+    button {
       padding: none;
       border: none;
       width: 50px;
       height: 50px;
       background: none;
 
-      &:hover{
+      &:hover {
         cursor: pointer;
       }
 
-      img{
+      img {
         width: 30px;
         height: 30px;
       }
     }
   }
-
-
 }
