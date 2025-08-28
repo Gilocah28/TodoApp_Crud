@@ -6,7 +6,7 @@
   width: 500px;
   min-height: 250px;
   max-height: 700px;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
 
@@ -23,7 +23,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    border: 2px solid rgb(255, 188, 6);
+    padding: 3px;
+    border-radius: 15px;
+    
     button {
       padding: none;
       border: none;
