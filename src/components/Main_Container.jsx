@@ -9,7 +9,7 @@ const Main_Container = ({ isToggle, handleToggle }) => {
   return (
     <div className="container">
       <div className="title">
-        <h1>TODO</h1>
+        <h1>TODO APP</h1>
         <button onClick={handleToggle}>
           <img src={isToggle ? sunBtn : moonBtn} alt="btn" />
         </button>
